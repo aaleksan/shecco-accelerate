@@ -7,9 +7,16 @@ app.controller('IssueController', ['$scope','$sce','IssueFactory', function($sco
 	IssueFactory.getData().then(success,error);
 
 	function success(response) {
-		$scope.issues = response.data.splice(0, 1);
-		console.log($scope.issues);
-		$scope.issue_main = $scope.issues[0];
+		var issues = response.data;
+		$scope.issue_main = issues[0];
+		
+		if (issues.length <= 1) {
+			issues = [];
+		} else {
+			issues.shift();
+		}
+		
+		$scope.issues = issues;
 	}
 	
 	function error(err) {
@@ -22,6 +29,13 @@ app.directive('issueFeature', function() {
 	return {
 		restrict: 'E',
 		templateUrl: 'views/issue-feature.html'	
+	};
+});
+
+app.directive('issueArchive', function() {
+	return {
+		restrict: 'E',
+		templateUrl: 'views/issue-archive.html'	
 	};
 });
 

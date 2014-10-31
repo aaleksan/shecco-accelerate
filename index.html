@@ -16,31 +16,7 @@
     
     <issue-feature></issue-feature>
     
-    <div class="container archive" ng-show="issues.length">
-    
-   		<h2>ACCELERATE AMERICA <span>ARCHIVE</span></h2>
-    
-    	<div class="item" ng:repeat="issue in issues">
-        	
-            <div class="row">
-            
-            	<div class="col-md-2 image">
-                	<img style="width:90%" src="{{issue.image}}"><br />
-                </div>
-                
-            	<div class="col-md-8 text">
-                	<div>
-                    	<span>{{issue.issue}}</span>
-                        <h3>{{issue.title}}</h3>
-                        <p>{{issue.description_sm}}</p>
-                    </div>
-                </div>
-            
-            </div>
-            
-        </div>
-
-	</div>
+    <issue-archive></issue-archive>
     
     <div class="footer">
 		<div class="container">

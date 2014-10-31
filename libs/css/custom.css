@@ -119,6 +119,30 @@ body {
 	padding: 25px 0 0 0;
 }
 
+.archive .item a {
+	width: 120px;
+	height: 120px;
+	display: block;
+    background: transparent url('../../assets/images/btn-download-sm.png') top left no-repeat;
+}
+
+.archive .item a:hover {
+    background: transparent url('../../assets/images/btn-download-sm-on.png') top left no-repeat;
+	text-decoration: none;
+	color: #fff;
+    -webkit-transition: .3s all;   
+    -moz-transition: .3s all;   
+    -ms-transition: .3s all;   
+    -o-transition: .3s all;  
+    transition: .3s all;
+}
+
+.img-responsive {
+	margin: 0;
+	padding: 0;
+	display: inline;	
+}
+
 .issue div h3 {
 	font-family: 'Roboto Slab', sans-serif;
 	font-weight: 300;
