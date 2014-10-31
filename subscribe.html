@@ -1,0 +1,35 @@
+<div class="modal-body" ng-controller="FormsController">
+    
+    <form role="form">
+    
+        <div class="form-group">
+            <label for="inputName">Name</label>
+            <input type="name" class="form-control" id="inputName" placeholder="">
+        </div>
+        
+        <div class="form-group">
+            <label for="inputEmail">Email</label>
+            <input type="email" class="form-control" id="inputEmail" placeholder="">
+        </div>
+        
+        <div class="form-group">
+            <label for="exampleInputEmail">Country</label>
+            <select class="form-control" id="inputCountry">
+                <option value="">- Please select -</option>
+                <option ng:repeat="country in countries" value="{{country.name}}">{{country.name}}</option>
+            </select>
+        </div>
+        
+        <div class="checkbox">
+            <label>
+            	<input type="checkbox"> <div style="padding:3px">I am interested in other products and publications</div>
+            </label>
+        </div>
+    
+		<div align="center" style="padding:20px">
+          <button type="submit" class="btn btn-default btn-subscribe">subscribe</button><!---->
+        </div>
+      
+    </form>
+    
+</div>
