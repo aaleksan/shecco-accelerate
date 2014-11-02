@@ -13,8 +13,8 @@
             	<div class="col-md-8 text">
                 	<div>
                     	<span>{{issue.issue}}</span>
-                        <h3>{{issue.title}}</h3>
-                        <p>{{issue.description_sm}}</p>
+                        <h3 data-ng-bind-html="issue.title"></h3>
+                        <p data-ng-bind-html="issue_main.description"></p>
                     </div>
                 </div>
                 

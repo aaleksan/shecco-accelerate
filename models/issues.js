@@ -1,4 +1,4 @@
-var app = angular.module('acc-issues', [ ]);
+var app = angular.module('acc-issues', ['ngSanitize']);
 	
 app.controller('IssueController', ['$scope','$sce','IssueFactory', function($scope, $sce, IssueFactory) {
 	
@@ -8,6 +8,7 @@ app.controller('IssueController', ['$scope','$sce','IssueFactory', function($sco
 
 	function success(response) {
 		var issues = response.data;
+
 		$scope.issue_main = issues[0];
 		
 		if (issues.length <= 1) {
@@ -15,7 +16,7 @@ app.controller('IssueController', ['$scope','$sce','IssueFactory', function($sco
 		} else {
 			issues.shift();
 		}
-		
+
 		$scope.issues = issues;
 	}
 	

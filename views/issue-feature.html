@@ -10,8 +10,8 @@
             	<div class="col-md-7 issue">
                 	<div>
                     	<h3>{{issue_main.issue}}</h3>
-                        <h2>{{issue_main.title}}</h2>
-                        <p>{{issue_main.description}}</p>
+                        <h2 data-ng-bind-html="issue_main.title"></h2>
+                        <p data-ng-bind-html="issue_main.description"></p>
                     </div>
                 	<a href="{{issue_main.link}}"><div>download</div></a>
                 </div>
